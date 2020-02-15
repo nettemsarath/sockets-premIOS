@@ -24,7 +24,7 @@ nsp.on('connection',(socket)=>{
         setInterval(()=>{
             let random_Number= getRandomInt(10) 
             socket.emit('catcher',random_Number)
-        },60000)
+        },1000)
     })
     function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
