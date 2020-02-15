@@ -19,6 +19,7 @@ io.set('origins', '*:*');
 const nsp = io.of('/random');
 nsp.on('connection',(socket)=>{
     console.log('user connected..')
+    socket.emit('status',{ message:"User connected" })
     socket.on('catcher',()=>{
         setInterval(()=>{
             let random_Number= getRandomInt(10) 
