@@ -20,10 +20,10 @@ const nsp = io.of('/random');
 nsp.on('connection',(socket)=>{
     console.log('user connected..')
     socket.emit('status',{ message:"User connected premsai" })
-    socket.on('catcher',()=>{
+    socket.on('capture',()=>{
         setInterval(()=>{
             let random_Number= getRandomInt(10) 
-            socket.emit('catcher',random_Number)
+            socket.emit('capture',random_Number)
         },1000)
     })
     function getRandomInt(max) {
